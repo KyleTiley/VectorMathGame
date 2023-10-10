@@ -1,7 +1,8 @@
+Line2D
+Node2D
 Sprite2D
 Label
 Node
-Node2D
 AnimationPlayer
 TextEdit
 CanvasLayer

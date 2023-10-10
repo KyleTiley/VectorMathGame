@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt0o6dl5yrvhn"]
+[gd_scene load_steps=5 format=3 uid="uid://bt0o6dl5yrvhn"]
 
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
 [ext_resource type="Texture2D" uid="uid://cvarbbvc0wbi7" path="res://Assets/funkyfuture-8-32x.png" id="2_hiedo"]
 [ext_resource type="Texture2D" uid="uid://b456p758low6g" path="res://Assets/graph.png" id="3_uc8lm"]
+[ext_resource type="PackedScene" uid="uid://clpdg0alisxch" path="res://Game/VectorLine/vector_line.tscn" id="4_ebo5a"]
 
 [node name="Game" type="Node"]
 
@@ -46,6 +47,9 @@ text = "VECTOR  ADDITION  X   and  Y  1234567890"
 position = Vector2(389, 214)
 scale = Vector2(2, 2)
 texture = ExtResource("3_uc8lm")
+
+[node name="VectorLine" parent="Levels/VectorAddition" instance=ExtResource("4_ebo5a")]
+position = Vector2(241, 232)
 
 [node name="ScalarMultiplication" type="Node" parent="Levels"]
 
