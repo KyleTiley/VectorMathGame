@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt0o6dl5yrvhn"]
+
+[ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
+[ext_resource type="Texture2D" uid="uid://cvarbbvc0wbi7" path="res://Assets/funkyfuture-8-32x.png" id="2_hiedo"]
+[ext_resource type="Texture2D" uid="uid://b456p758low6g" path="res://Assets/graph.png" id="3_pu0hm"]
+
+[node name="Game" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.407843, 0.862745, 1)
+
+[node name="Funkyfuture-8-32x" type="Sprite2D" parent="."]
+position = Vector2(130, -18)
+texture = ExtResource("2_hiedo")
+
+[node name="Calculator" parent="." instance=ExtResource("1_lx25n")]
+position = Vector2(58, 268)
+
+[node name="Levels" type="Node" parent="."]
+
+[node name="VectorAddition" type="Node" parent="Levels"]
+
+[node name="Label" type="Label" parent="Levels/VectorAddition"]
+offset_left = 229.0
+offset_top = 12.0
+offset_right = 394.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 26
+text = "VECTOR ADDITION X and Y 1234567890"
+
+[node name="Graph" type="Sprite2D" parent="Levels/VectorAddition"]
+position = Vector2(389, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("3_pu0hm")
+
+[node name="ScalarMultiplication" type="Node" parent="Levels"]
+
+[node name="DotProduct" type="Node" parent="Levels"]

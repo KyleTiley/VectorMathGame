@@ -1,0 +1,13 @@
+Sprite2D
+Label
+Node
+Node2D
+AnimationPlayer
+TextEdit
+CanvasLayer
+ColorRect
+TextureRect
+Control
+Button
+ColorPicker
+GraphEdit
