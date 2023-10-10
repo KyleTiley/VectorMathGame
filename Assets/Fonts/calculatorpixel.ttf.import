@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cfsd5mw03nps1"
+uid="uid://1621xwt4gwmc"
 path="res://.godot/imported/calculatorpixel.ttf-53d120fd4cb3ad5e30259c060a947792.fontdata"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/calculatorpixel.ttf-53d120fd4cb3ad5e30259c060
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=1
 generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8

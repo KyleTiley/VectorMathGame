@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://chocvexx1pbk7"]
+
+[ext_resource type="FontFile" uid="uid://1621xwt4gwmc" path="res://Assets/Fonts/calculatorpixel.ttf" id="1_bgrs0"]
+
+[resource]
+base_font = ExtResource("1_bgrs0")
