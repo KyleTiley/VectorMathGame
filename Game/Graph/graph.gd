@@ -12,9 +12,6 @@ func receive_point_info(_name, _position):
 	print(str(_name) + " at " + str(_position))
 	create_vector_line()
 
-func receive_question():
-	pass
-
 # LINE CODE
 @onready var vector_line : Line2D = $"../VectorLine"
 

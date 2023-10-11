@@ -7,3 +7,5 @@ res://Game/Graph/graph_point_area_2d.tscn
 res://Game/Graph/graph_point_area_2d.gd
 res://Game/Graph/graph.gd
 res://Game/Levels/VectorAddition.gd
+res://Game/Graph/vector_graph.tscn
+res://Game/Graph/vector_graph.gd
