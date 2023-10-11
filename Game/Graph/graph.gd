@@ -13,7 +13,7 @@ func receive_point_info(_name, _position):
 	create_vector_line()
 
 # LINE CODE
-@onready var vector_line : Line2D = $"../VectorLine"
+@onready var vector_line : Line2D = $"../VectorLine3"
 
 func create_vector_line():
 	pass

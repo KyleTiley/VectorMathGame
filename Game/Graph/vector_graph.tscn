@@ -287,4 +287,8 @@ position = Vector2(192, -80)
 [node name="[12,6]" parent="Graph" instance=ExtResource("4_xv2d1")]
 position = Vector2(192, -96)
 
-[node name="VectorLine" parent="." instance=ExtResource("5_86yl3")]
+[node name="Vector1" parent="." instance=ExtResource("5_86yl3")]
+
+[node name="Vector2" parent="." instance=ExtResource("5_86yl3")]
+
+[node name="VectorLine3" parent="." instance=ExtResource("5_86yl3")]
