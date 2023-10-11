@@ -14,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Background" type="ColorRect" parent="UI"]
 layout_mode = 1
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.2, 0.407843, 0.862745, 1)
 
 [node name="Funkyfuture-8-32x" type="Sprite2D" parent="."]
@@ -29,7 +31,7 @@ position = Vector2(130, -18)
 texture = ExtResource("2_hiedo")
 
 [node name="Calculator" parent="." instance=ExtResource("1_lx25n")]
-position = Vector2(58, 268)
+position = Vector2(80, 265)
 
 [node name="Levels" type="Node" parent="."]
 
@@ -44,7 +46,7 @@ theme_override_font_sizes/font_size = 26
 text = "VECTOR  ADDITION  X   and  Y  1234567890"
 
 [node name="Graph" parent="Levels/VectorAddition" instance=ExtResource("3_wvvsj")]
-position = Vector2(394, 220)
+position = Vector2(195, 318)
 
 [node name="VectorLine" parent="Levels/VectorAddition" instance=ExtResource("4_ebo5a")]
 position = Vector2(241, 232)
