@@ -5,3 +5,4 @@ res://Game/VectorLine/vector_line.tscn
 res://Game/Graph/graph.tscn
 res://Game/Graph/graph_point_area_2d.tscn
 res://Game/Graph/graph_point_area_2d.gd
+res://Game/Graph/graph.gd

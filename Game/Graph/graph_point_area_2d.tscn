@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Game/Graph/graph_point_area_2d.gd" id="1_yvtcj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51dkx"]
-radius = 4.52769
+radius = 6.0
 
 [node name="GraphPointArea2D" type="Area2D"]
 script = ExtResource("1_yvtcj")
