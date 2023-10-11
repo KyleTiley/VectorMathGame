@@ -1,283 +1,288 @@
-[gd_scene load_steps=4 format=3 uid="uid://tq1ld42isp6r"]
+[gd_scene load_steps=5 format=3 uid="uid://tq1ld42isp6r"]
 
 [ext_resource type="Texture2D" uid="uid://b456p758low6g" path="res://Assets/graph.png" id="1_g14p5"]
 [ext_resource type="Script" path="res://Game/Graph/graph.gd" id="2_64thd"]
 [ext_resource type="PackedScene" uid="uid://s0u0nm5kmjwl" path="res://Game/Graph/graph_point_area_2d.tscn" id="2_fn5g6"]
+[ext_resource type="PackedScene" uid="uid://clpdg0alisxch" path="res://Game/VectorLine/vector_line.tscn" id="4_l7rx2"]
 
-[node name="Graph" type="Sprite2D"]
+[node name="Graph" type="Node2D"]
+
+[node name="GraphSprite" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("1_g14p5")
 offset = Vector2(98.5, -51)
 script = ExtResource("2_64thd")
 
-[node name="[0,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 
-[node name="[0,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -16)
 
-[node name="[0,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -32)
 
-[node name="[0,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -48)
 
-[node name="[0,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -64)
 
-[node name="[0,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -80)
 
-[node name="[0,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[0,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(0, -96)
 
-[node name="[1,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, 0)
 
-[node name="[1,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -16)
 
-[node name="[1,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -32)
 
-[node name="[1,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -48)
 
-[node name="[1,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -64)
 
-[node name="[1,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -80)
 
-[node name="[1,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[1,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(16, -96)
 
-[node name="[2,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, 0)
 
-[node name="[2,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -16)
 
-[node name="[2,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -32)
 
-[node name="[2,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -48)
 
-[node name="[2,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -64)
 
-[node name="[2,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -80)
 
-[node name="[2,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[2,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(32, -96)
 
-[node name="[3,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, 0)
 
-[node name="[3,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -16)
 
-[node name="[3,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -32)
 
-[node name="[3,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -48)
 
-[node name="[3,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -64)
 
-[node name="[3,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -80)
 
-[node name="[3,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[3,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(48, -96)
 
-[node name="[4,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, 0)
 
-[node name="[4,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -16)
 
-[node name="[4,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -32)
 
-[node name="[4,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -48)
 
-[node name="[4,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -64)
 
-[node name="[4,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -80)
 
-[node name="[4,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[4,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(64, -96)
 
-[node name="[5,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, 0)
 
-[node name="[5,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -16)
 
-[node name="[5,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -32)
 
-[node name="[5,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -48)
 
-[node name="[5,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -64)
 
-[node name="[5,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -80)
 
-[node name="[5,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[5,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(80, -96)
 
-[node name="[6,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, 0)
 
-[node name="[6,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -16)
 
-[node name="[6,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -32)
 
-[node name="[6,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -48)
 
-[node name="[6,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -64)
 
-[node name="[6,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -80)
 
-[node name="[6,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[6,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(96, -96)
 
-[node name="[7,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, 0)
 
-[node name="[7,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -16)
 
-[node name="[7,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -32)
 
-[node name="[7,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -48)
 
-[node name="[7,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -64)
 
-[node name="[7,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -80)
 
-[node name="[7,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[7,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(112, -96)
 
-[node name="[8,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, 0)
 
-[node name="[8,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -16)
 
-[node name="[8,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -32)
 
-[node name="[8,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -48)
 
-[node name="[8,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -64)
 
-[node name="[8,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -80)
 
-[node name="[8,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[8,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(128, -96)
 
-[node name="[9,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, 0)
 
-[node name="[9,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -16)
 
-[node name="[9,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -32)
 
-[node name="[9,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -48)
 
-[node name="[9,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -64)
 
-[node name="[9,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -80)
 
-[node name="[9,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[9,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(144, -96)
 
-[node name="[10,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, 0)
 
-[node name="[10,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -16)
 
-[node name="[10,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -32)
 
-[node name="[10,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -48)
 
-[node name="[10,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -64)
 
-[node name="[10,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -80)
 
-[node name="[10,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[10,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(160, -96)
 
-[node name="[11,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, 0)
 
-[node name="[11,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -16)
 
-[node name="[11,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -32)
 
-[node name="[11,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -48)
 
-[node name="[11,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -64)
 
-[node name="[11,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -80)
 
-[node name="[11,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[11,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(176, -96)
 
-[node name="[12,0]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,0]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, 0)
 
-[node name="[12,1]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,1]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -16)
 
-[node name="[12,2]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,2]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -32)
 
-[node name="[12,3]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,3]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -48)
 
-[node name="[12,4]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,4]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -64)
 
-[node name="[12,5]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,5]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -80)
 
-[node name="[12,6]" parent="." instance=ExtResource("2_fn5g6")]
+[node name="[12,6]" parent="GraphSprite" instance=ExtResource("2_fn5g6")]
 position = Vector2(192, -96)
+
+[node name="VectorLine" parent="." instance=ExtResource("4_l7rx2")]

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
 [ext_resource type="Texture2D" uid="uid://cvarbbvc0wbi7" path="res://Assets/funkyfuture-8-32x.png" id="2_hiedo"]
+[ext_resource type="Script" path="res://Game/Levels/VectorAddition.gd" id="3_4f0yh"]
 [ext_resource type="PackedScene" uid="uid://tq1ld42isp6r" path="res://Game/Graph/graph.tscn" id="3_wvvsj"]
-[ext_resource type="PackedScene" uid="uid://clpdg0alisxch" path="res://Game/VectorLine/vector_line.tscn" id="4_ebo5a"]
 
 [node name="Game" type="Node"]
 
@@ -36,6 +36,7 @@ position = Vector2(80, 265)
 [node name="Levels" type="Node" parent="."]
 
 [node name="VectorAddition" type="Node" parent="Levels"]
+script = ExtResource("3_4f0yh")
 
 [node name="Label" type="Label" parent="Levels/VectorAddition"]
 offset_left = 229.0
@@ -47,10 +48,3 @@ text = "VECTOR  ADDITION  X   and  Y  1234567890"
 
 [node name="Graph" parent="Levels/VectorAddition" instance=ExtResource("3_wvvsj")]
 position = Vector2(195, 318)
-
-[node name="VectorLine" parent="Levels/VectorAddition" instance=ExtResource("4_ebo5a")]
-position = Vector2(241, 232)
-
-[node name="ScalarMultiplication" type="Node" parent="Levels"]
-
-[node name="DotProduct" type="Node" parent="Levels"]
