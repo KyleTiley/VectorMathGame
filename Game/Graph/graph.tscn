@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://tq1ld42isp6r"]
+
+[ext_resource type="Texture2D" uid="uid://b456p758low6g" path="res://Assets/graph.png" id="1_g14p5"]
+[ext_resource type="PackedScene" uid="uid://s0u0nm5kmjwl" path="res://Game/Graph/graph_point_area_2d.tscn" id="2_fn5g6"]
+
+[node name="Graph" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_g14p5")
+offset = Vector2(98.5, -51)
+
+[node name="[0,0]" parent="." instance=ExtResource("2_fn5g6")]
+
+[node name="[0,1]" parent="." instance=ExtResource("2_fn5g6")]
+position = Vector2(0, -16)
+
+[node name="[0,2]" parent="." instance=ExtResource("2_fn5g6")]
+position = Vector2(0, -32)
+
+[node name="[0,3]" parent="." instance=ExtResource("2_fn5g6")]
+position = Vector2(0, -48)
+
+[node name="GraphPointArea2D5" parent="." instance=ExtResource("2_fn5g6")]
+position = Vector2(16, -16)
+
+[node name="GraphPointArea2D6" parent="." instance=ExtResource("2_fn5g6")]
+position = Vector2(32, -16)
