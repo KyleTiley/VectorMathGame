@@ -23,7 +23,7 @@ func compute_vectors():
 	while !end:
 		vector_2 = vector_setting()
 		
-		if vector_1 != vector_2:
+		if !check_vector_parallel(vector_1, vector_2):
 			end = true
 	
 	graph.receive_question(vector_1, vector_2)
@@ -41,8 +41,19 @@ func random_number_generator(_min, _max):
 	return new_random_number
 
 func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
-	if int(vec1.x) % int(vec2.x) == 0 or int(vec2.x) % int(vec1.x) == 0:
-		if int(vec1.y) % int(vec2.y) == 0 or int(vec2.y) % int(vec1.y) == 0:
-			return true
+	var x_ratio = vec1.x / vec2.x
+	var y_ratio = vec1.y / vec2.y
+	if x_ratio == y_ratio:
+		print("FAILED with " + str(vec1) + " and " + str(vec2))
+		return true
 	else:
 		return false
+	
+#	if int(vec1.x) % int(vec2.x) == 0 or int(vec2.x) % int(vec1.x) == 0:
+#		if int(vec1.y) % int(vec2.y) == 0 or int(vec2.y) % int(vec1.y) == 0:
+#			return true
+#		else:
+#			return false
+#	else:
+#		print("FAILED with " + str(vec1) + " and " + str(vec2))
+#		return false
