@@ -14,7 +14,8 @@ func create_arrow():
 	collision.shape = RectangleShape2D.new()
 	collision.position = diff/2
 	area.add_child(collision)
-	collision.rotation = tanh(diff.y / diff.x) # angle a bit off?
+	collision.rotation = atan(diff.y / diff.x) # angle a bit off?
+	print(collision.rotation)
 	collision.shape.extents.x = 10
 	collision.shape.extents.x = sqrt(pow(diff.x, 2) + pow(diff.y, 2))/2 # div of 2 since rez is double
 	

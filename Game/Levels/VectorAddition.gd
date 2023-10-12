@@ -48,12 +48,3 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 		return true
 	else:
 		return false
-	
-#	if int(vec1.x) % int(vec2.x) == 0 or int(vec2.x) % int(vec1.x) == 0:
-#		if int(vec1.y) % int(vec2.y) == 0 or int(vec2.y) % int(vec1.y) == 0:
-#			return true
-#		else:
-#			return false
-#	else:
-#		print("FAILED with " + str(vec1) + " and " + str(vec2))
-#		return false
