@@ -1,20 +1,21 @@
 extends Line2D
 
+@onready var area = $Area2D
 @onready var collision = CollisionShape2D.new()
 
 func create_arrow():
 	var start_point = self.get_point_position(0)
 	var end_point = self.get_point_position(1)
 	
-	# set up collision
-	collision.shape = SegmentShape2D.new()
-	collision.shape.a = start_point
-	collision.shape.b = end_point
-	$Area2D.add_child(collision)
-	
 	var diff = end_point - start_point
 	print(diff)
 	
+	# set up collision
+	collision.shape = RectangleShape2D.new()
+	collision.position = diff/2
+	area.add_child(collision)
+	collision.rotation = tanh(diff.y / diff.x) # angle a bit off?
+	collision.scale.x = (sqrt(pow(diff.x, 2) + pow(diff.y, 2)))/100
 	
 	var theta = atan2(diff.y, diff.x)
 	var rad = deg_to_rad(35)
