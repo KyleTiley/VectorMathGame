@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://clpdg0alisxch"]
+[gd_scene load_steps=2 format=3 uid="uid://clpdg0alisxch"]
+
+[ext_resource type="Script" path="res://Game/VectorLine/vector_line.gd" id="1_0kood"]
 
 [node name="VectorLine2D" type="Line2D"]
-position = Vector2(2, 0)
-points = PackedVector2Array(-1, 0, 127, -86)
+points = PackedVector2Array(0, 0, 127, -86)
 width = 6.0
 default_color = Color(1, 0.309712, 0.41181, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
+script = ExtResource("1_0kood")

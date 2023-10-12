@@ -2,10 +2,7 @@ res://Game/game.tscn
 res://Game/Calculator/calculator.tscn
 res://Game/Calculator/SpeechBubble/speech_bubble.tscn
 res://Game/VectorLine/vector_line.tscn
-res://Game/Graph/graph.tscn
 res://Game/Graph/graph_point_area_2d.tscn
-res://Game/Graph/graph_point_area_2d.gd
-res://Game/Graph/graph.gd
-res://Game/Levels/VectorAddition.gd
 res://Game/Graph/vector_graph.tscn
+res://Game/VectorLine/vector_line.gd
 res://Game/Graph/vector_graph.gd
