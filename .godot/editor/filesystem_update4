@@ -8,3 +8,5 @@ res://Game/VectorLine/vector_line.gd
 res://Game/Graph/vector_graph.gd
 res://Game/Graph/graph_point_area_2d.gd
 res://Game/Graph/graph.gd
+res://clicker.gd
+res://Game/Levels/VectorAddition.gd
