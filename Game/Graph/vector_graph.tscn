@@ -288,9 +288,10 @@ position = Vector2(192, -80)
 position = Vector2(192, -96)
 
 [node name="Vector1" parent="." instance=ExtResource("5_86yl3")]
+default_color = Color(1, 0.309712, 0.41181, 1)
 
 [node name="Vector2" parent="." instance=ExtResource("5_86yl3")]
 default_color = Color(1, 0.506096, 0.258915, 1)
 
-[node name="VectorLine3" parent="." instance=ExtResource("5_86yl3")]
+[node name="Vector3" parent="." instance=ExtResource("5_86yl3")]
 default_color = Color(1, 0.854902, 0.270634, 1)
