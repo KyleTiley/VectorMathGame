@@ -10,3 +10,4 @@ res://Game/Levels/VectorAddition.gd
 res://Game/global.gd
 res://Game/Calculator/Face/Face.gd
 res://Game/Calculator/calculator.gd
+res://Game/Calculator/SpeechBubble/SpeechBubble.gd

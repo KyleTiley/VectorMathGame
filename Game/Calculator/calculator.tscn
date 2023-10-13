@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbgvg7rm1fyk1"]
+[gd_scene load_steps=14 format=3 uid="uid://cbgvg7rm1fyk1"]
 
 [ext_resource type="Texture2D" uid="uid://qbum8mgryr40" path="res://Game/Calculator/CalculatorBody.png" id="1_74wfv"]
 [ext_resource type="Script" path="res://Game/Calculator/calculator.gd" id="1_s7bmt"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b7tyljgirvtcs" path="res://Game/Calculator/Face/small.png" id="4_av730"]
 [ext_resource type="PackedScene" uid="uid://b533mh0vjj2ak" path="res://Game/Calculator/SpeechBubble/speech_bubble.tscn" id="4_vuv2q"]
 [ext_resource type="Texture2D" uid="uid://c8anpatxyjgy6" path="res://Game/Calculator/Face/stale.png" id="5_emvpp"]
+[ext_resource type="Texture2D" uid="uid://pew4qwwbq33l" path="res://Game/Calculator/Face/smile.png" id="6_ikmsb"]
+[ext_resource type="Texture2D" uid="uid://de323ilak1dxf" path="res://Game/Calculator/Face/uwu.png" id="8_mlg6j"]
 
 [sub_resource type="Animation" id="Animation_tbell"]
 length = 0.001
@@ -56,6 +58,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_kko7p"]
@@ -116,9 +130,63 @@ tracks/0/keys = {
 "values": [0.0, 0.0872665, 0.0, -0.0872665, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_8j0vu"]
+resource_name = "celebrate"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.6, 0.7, 0.9, 1, 1.2, 1.3, 1.5, 1.6, 1.8, 1.9, 2.1, 2.2, 2.4, 2.5, 2.7, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 2), Vector2(-0.0741879, 3.13901), Vector2(0, 2), Vector2(0.074, 3.139), Vector2(0, 2), Vector2(-0.0741879, 3.13901), Vector2(0, 2), Vector2(0.074, 3.139), Vector2(0, 2), Vector2(-0.0741879, 3.13901), Vector2(0, 2), Vector2(0.074, 3.139), Vector2(0, 2), Vector2(-0.0741879, 3.13901), Vector2(0, 2), Vector2(0.074, 3.139), Vector2(0, 2), Vector2(-0.0741879, 3.13901), Vector2(0, 2), Vector2(0.074, 3.139), Vector2(0, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.6, 0.7, 0.9, 1, 1.2, 1.3, 1.5, 1.6, 1.8, 1.9, 2.1, 2.2, 2.4, 2.5, 2.7, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(2, 2.03274), Vector2(2, 2), Vector2(2, 2.033), Vector2(2, 2), Vector2(2, 2.03274), Vector2(2, 2), Vector2(2, 2.033), Vector2(2, 2), Vector2(2, 2.03274), Vector2(2, 2), Vector2(2, 2.033), Vector2(2, 2), Vector2(2, 2.03274), Vector2(2, 2), Vector2(2, 2.033), Vector2(2, 2), Vector2(2, 2.03274), Vector2(2, 2), Vector2(2, 2.033), Vector2(2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Face:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_ikmsb"), ExtResource("8_mlg6j"), ExtResource("6_ikmsb"), ExtResource("8_mlg6j"), ExtResource("6_ikmsb")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.6, 0.7, 0.9, 1, 1.2, 1.3, 1.5, 1.6, 1.8, 1.9, 2.1, 2.2, 2.4, 2.5, 2.7, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0872665, 0.0, -0.0872665, 0.0, 0.0872665, 0.0, -0.0872665, 0.0, 0.0872665, 0.0, -0.0872665, 0.0, 0.0872665, 0.0, -0.0872665, 0.0, 0.0872665, 0.0, -0.0872665, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kkvm0"]
 _data = {
 "RESET": SubResource("Animation_tbell"),
+"celebrate": SubResource("Animation_8j0vu"),
 "idle": SubResource("Animation_kko7p"),
 "idle_bubble": SubResource("Animation_sbmmg")
 }
@@ -140,7 +208,7 @@ texture = ExtResource("1_74wfv")
 position = Vector2(0, -17)
 
 [node name="SpeechBubble" parent="." instance=ExtResource("4_vuv2q")]
-position = Vector2(-12, -88)
+position = Vector2(-34, -90)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"

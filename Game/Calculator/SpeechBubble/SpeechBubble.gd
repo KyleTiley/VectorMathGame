@@ -11,10 +11,11 @@ var ratio_difference = 16
 var speech_text : String
 
 func _process(_delta):
-	label.text = $TextEdit.text # for debugging
-	
 	ChangeSpeechBubbleSize()
 	right_bubble.global_position = middle_button_target.global_position
+
+func change_text(new_text : String):
+	label.text = new_text
 
 func ChangeSpeechBubbleSize():
 	if label.size.x > label_size_default:
