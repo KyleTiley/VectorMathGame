@@ -8,3 +8,5 @@ res://Game/VectorLine/vector_line.gd
 res://Game/Graph/graph.gd
 res://Game/Levels/VectorAddition.gd
 res://Game/global.gd
+res://Game/Calculator/Face/Face.gd
+res://Game/Calculator/calculator.gd

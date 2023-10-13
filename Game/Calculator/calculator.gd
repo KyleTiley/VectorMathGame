@@ -7,3 +7,12 @@ enum CalculatorState{
 }
 
 var current_state : CalculatorState
+
+func change_state(state : CalculatorState):
+	match state:
+		CalculatorState.IDLE:
+			pass
+		CalculatorState.SPEAKING:
+			pass
+		CalculatorState.CELEBRATING:
+			pass

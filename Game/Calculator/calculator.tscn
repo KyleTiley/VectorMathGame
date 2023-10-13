@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbgvg7rm1fyk1"]
+[gd_scene load_steps=11 format=3 uid="uid://cbgvg7rm1fyk1"]
 
 [ext_resource type="Texture2D" uid="uid://qbum8mgryr40" path="res://Game/Calculator/CalculatorBody.png" id="1_74wfv"]
 [ext_resource type="Script" path="res://Game/Calculator/calculator.gd" id="1_s7bmt"]
 [ext_resource type="Texture2D" uid="uid://6cul5mn8bjxj" path="res://Game/Calculator/CalculatorLegs.png" id="3_hjcop"]
+[ext_resource type="Texture2D" uid="uid://b7tyljgirvtcs" path="res://Game/Calculator/Face/small.png" id="4_av730"]
 [ext_resource type="PackedScene" uid="uid://b533mh0vjj2ak" path="res://Game/Calculator/SpeechBubble/speech_bubble.tscn" id="4_vuv2q"]
+[ext_resource type="Texture2D" uid="uid://c8anpatxyjgy6" path="res://Game/Calculator/Face/stale.png" id="5_emvpp"]
 
 [sub_resource type="Animation" id="Animation_tbell"]
 length = 0.001
@@ -43,9 +45,22 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(2, 2)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/Face:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
 
 [sub_resource type="Animation" id="Animation_kko7p"]
 resource_name = "idle"
+length = 3.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -54,10 +69,10 @@ tracks/0/path = NodePath("Body:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4, 0.7, 1.1, 1.4, 1.8, 2.1, 2.5, 2.8, 3.2, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2)]
+"values": [Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2), Vector2(5.36442e-07, 6), Vector2(0, 2)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -66,10 +81,22 @@ tracks/1/path = NodePath("Body:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4, 0.7, 1.1, 1.4, 1.8, 2.1, 2.5, 2.8, 3.2, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2)]
+"values": [Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2), Vector2(2.22222, 1.84615), Vector2(2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/Face:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.2, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_emvpp"), ExtResource("4_av730"), ExtResource("5_emvpp")]
 }
 
 [sub_resource type="Animation" id="Animation_sbmmg"]
@@ -99,17 +126,18 @@ _data = {
 [node name="Calculator" type="Node2D"]
 script = ExtResource("1_s7bmt")
 
-[node name="Face" type="Sprite2D" parent="."]
+[node name="Legs" type="Sprite2D" parent="."]
+position = Vector2(0, 73)
+scale = Vector2(2, 2)
+texture = ExtResource("3_hjcop")
 
 [node name="Body" type="Sprite2D" parent="."]
 position = Vector2(0, 2)
 scale = Vector2(2, 2)
 texture = ExtResource("1_74wfv")
 
-[node name="Legs" type="Sprite2D" parent="."]
-position = Vector2(0, 73)
-scale = Vector2(2, 2)
-texture = ExtResource("3_hjcop")
+[node name="Face" type="Sprite2D" parent="Body"]
+position = Vector2(0, -17)
 
 [node name="SpeechBubble" parent="." instance=ExtResource("4_vuv2q")]
 position = Vector2(-12, -88)
