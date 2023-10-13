@@ -47,8 +47,6 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		selection_offset = global_position - get_global_mouse_position()
 
 func _physics_process(delta):
-	print(line.global_position)
-	print(get_global_mouse_position())
 	if selected:
 		line.global_position = lerp(line.global_position, get_global_mouse_position(), 25 * delta)
 

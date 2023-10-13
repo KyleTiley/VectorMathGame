@@ -99,17 +99,7 @@ _data = {
 [node name="Calculator" type="Node2D"]
 script = ExtResource("1_s7bmt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "idle"
-libraries = {
-"": SubResource("AnimationLibrary_kkvm0")
-}
-
-[node name="AnimationPlayer_Bubble" type="AnimationPlayer" parent="."]
-autoplay = "idle_bubble"
-libraries = {
-"": SubResource("AnimationLibrary_kkvm0")
-}
+[node name="Face" type="Sprite2D" parent="."]
 
 [node name="Body" type="Sprite2D" parent="."]
 position = Vector2(0, 2)
@@ -123,3 +113,15 @@ texture = ExtResource("3_hjcop")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("4_vuv2q")]
 position = Vector2(-12, -88)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_kkvm0")
+}
+
+[node name="AnimationPlayer_Bubble" type="AnimationPlayer" parent="."]
+autoplay = "idle_bubble"
+libraries = {
+"": SubResource("AnimationLibrary_kkvm0")
+}

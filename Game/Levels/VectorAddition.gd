@@ -5,9 +5,9 @@ extends Node
 var vector_1 : Vector2
 var vector_2 : Vector2
 
-var x_min : int = 1
+var x_min : int = 2
 var x_max : int = 7
-var y_min : int = 1
+var y_min : int = 2
 var y_max : int = 4
 
 func _ready():
