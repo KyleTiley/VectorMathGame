@@ -7,8 +7,10 @@ var vector_2 : Vector2
 
 var x_min : int = 2
 var x_max : int = 7
+var x_edge : int = 13
 var y_min : int = 2
 var y_max : int = 4
+var y_edge : int = 7
 
 func _ready():
 	compute_vectors()
@@ -17,18 +19,18 @@ var x_component : int
 var y_component : int
 
 func compute_vectors():
-	vector_1 = vector_setting()
+	vector_1 = vector_setting_addition()
 	
 	var end = false
 	while !end:
-		vector_2 = vector_setting()
+		vector_2 = vector_setting_addition()
 		
 		if !check_vector_parallel(vector_1, vector_2):
 			end = true
 	
 	graph.receive_question(vector_1, vector_2)
 
-func vector_setting():
+func vector_setting_addition():
 	var vector : Vector2
 	x_component = random_number_generator(x_min, x_max)
 	y_component = random_number_generator(y_min, y_max)

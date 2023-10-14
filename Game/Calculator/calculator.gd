@@ -18,11 +18,12 @@ func change_state(state : CalculatorState):
 	match state:
 		CalculatorState.IDLE:
 			animation_player.play("idle")
+			send_dialogue("HELLO")
 		CalculatorState.SPEAKING:
 			pass
 		CalculatorState.CELEBRATING:
 			animation_player.play("celebrate")
-			send_dialogue("WELL DONE")
+			send_dialogue("WELL DONE!")
 
 @onready var speech_bubble = $SpeechBubble
 
