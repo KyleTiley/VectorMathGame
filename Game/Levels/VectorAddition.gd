@@ -1,6 +1,7 @@
-extends Node
+extends Node2D
 
 @onready var graph = $VectorGraph
+@onready var question_label = $Label
 
 var vector_1 : Vector2
 var vector_2 : Vector2
@@ -32,6 +33,8 @@ func compute_vectors_addition():
 		if !check_vector_parallel(vector_1, vector_2):
 			end = true
 	graph.receive_question(vector_1, vector_2)
+	question_label.text = "Vector Addition:" + '\n'
+	question_label.text += "What is vector " + str(vector_1) + " plus vector " + str(vector_2) + " ?"
 
 func compute_vectors_subtraction():
 	vector_1 = vector_setting(x_max, x_edge, y_max, y_edge)
@@ -41,6 +44,8 @@ func compute_vectors_subtraction():
 		if !check_vector_parallel(vector_1, vector_2):
 			end = true
 	graph.receive_question(vector_1, vector_2)
+	question_label.text = "Vector Subtraction:" + '\n'
+	question_label.text += "What is vector " + str(vector_1) + " minus vector " + str(vector_2) + " ?"
 
 func vector_setting(x1, x2, y1, y2):
 	var vector : Vector2

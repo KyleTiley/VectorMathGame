@@ -1,7 +1,7 @@
 extends Line2D
 
-@onready var line = $"."
 @onready var area = $Area2D
+@onready var position_node = $PositionNode
 @onready var collision = CollisionShape2D.new()
 
 func create_arrow():
@@ -44,11 +44,11 @@ var selection_offset : Vector2
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
 		selected = true
-		selection_offset = global_position - get_global_mouse_position()
+		selection_offset = position_node.global_position - get_global_mouse_position()
 
 func _physics_process(delta):
 	if selected:
-		line.global_position = lerp(line.global_position, get_global_mouse_position(), 25 * delta)
+		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta) + selection_offset/2
 
 func _input(event):
 	if event is InputEventMouseButton and not event.pressed and event.button_index == 1:

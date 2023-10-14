@@ -35,16 +35,17 @@ position = Vector2(53, 262)
 
 [node name="Levels" type="Node" parent="."]
 
-[node name="VectorAddition" type="Node" parent="Levels"]
+[node name="VectorAddition" type="Node2D" parent="Levels"]
 script = ExtResource("3_4f0yh")
 
 [node name="VectorGraph" parent="Levels/VectorAddition" instance=ExtResource("4_caddo")]
 position = Vector2(197, 321)
 
 [node name="Label" type="Label" parent="Levels/VectorAddition"]
-offset_left = 229.0
+offset_left = 160.0
 offset_top = 12.0
-offset_right = 394.0
+offset_right = 396.0
 offset_bottom = 41.0
 theme_override_font_sizes/font_size = 26
-text = "VECTOR  ADDITION  X   and  Y  1234567890"
+text = "Vector Addition:
+"
