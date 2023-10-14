@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=1000
 
+[autoload]
+
+Global="*res://Game/global.gd"
+
 [display]
 
 window/size/viewport_width=640

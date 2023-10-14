@@ -6,3 +6,4 @@ res://Game/VectorLine/vector_line.tscn
 res://Game/Calculator/SpeechBubble/speech_bubble.tscn
 res://Game/Graph/graph.gd
 res://Game/VectorLine/vector_line.gd
+res://Game/global.gd

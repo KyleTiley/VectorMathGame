@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt0o6dl5yrvhn"]
+[gd_scene load_steps=4 format=3 uid="uid://bt0o6dl5yrvhn"]
 
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
-[ext_resource type="Texture2D" uid="uid://cvarbbvc0wbi7" path="res://Assets/funkyfuture-8-32x.png" id="2_hiedo"]
 [ext_resource type="Script" path="res://Game/Levels/VectorAddition.gd" id="3_4f0yh"]
 [ext_resource type="PackedScene" uid="uid://tq1ld42isp6r" path="res://Game/Graph/vector_graph.tscn" id="4_caddo"]
 
@@ -26,10 +25,6 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.2, 0.407843, 0.862745, 1)
 
-[node name="Funkyfuture-8-32x" type="Sprite2D" parent="."]
-position = Vector2(130, -18)
-texture = ExtResource("2_hiedo")
-
 [node name="Calculator" parent="." instance=ExtResource("1_lx25n")]
 position = Vector2(53, 262)
 
@@ -41,11 +36,10 @@ script = ExtResource("3_4f0yh")
 [node name="VectorGraph" parent="Levels/VectorAddition" instance=ExtResource("4_caddo")]
 position = Vector2(197, 321)
 
-[node name="Label" type="Label" parent="Levels/VectorAddition"]
-offset_left = 160.0
-offset_top = 12.0
-offset_right = 396.0
-offset_bottom = 41.0
-theme_override_font_sizes/font_size = 26
-text = "Vector Addition:
-"
+[node name="RichTextLabel" type="RichTextLabel" parent="Levels/VectorAddition"]
+offset_left = 157.0
+offset_right = 633.0
+offset_bottom = 87.0
+theme_override_colors/default_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true

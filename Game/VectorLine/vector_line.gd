@@ -4,11 +4,12 @@ extends Line2D
 @onready var position_node = $PositionNode
 @onready var collision = CollisionShape2D.new()
 
+var diff
 func create_arrow():
 	var start_point = self.get_point_position(0)
 	var end_point = self.get_point_position(1)
 	
-	var diff = end_point - start_point
+	diff = end_point - start_point
 	print(diff)
 	
 	# set up collision
@@ -44,7 +45,7 @@ var selection_offset : Vector2
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
 		selected = true
-		selection_offset = position_node.global_position - get_global_mouse_position()
+		selection_offset = position_node.global_position - get_global_mouse_position() + diff/10 # bandaid solution try fix later
 
 func _physics_process(delta):
 	if selected:

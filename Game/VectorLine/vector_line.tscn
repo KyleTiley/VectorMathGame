@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Game/VectorLine/vector_line.gd" id="1_0kood"]
 
 [node name="VectorLine2D" type="Line2D"]
-points = PackedVector2Array(0, 0, 127, -86)
 width = 6.0
 default_color = Color(1, 0.309712, 0.41181, 1)
 begin_cap_mode = 2
