@@ -1,3 +1,6 @@
+Label
+LineEdit
+TextEdit
 RichTextLabel
 Node2D
 Sprite2D
@@ -5,10 +8,8 @@ CollisionShape2D
 Area2D
 CollisionPolygon2D
 Line2D
-Label
 Node
 AnimationPlayer
-TextEdit
 CanvasLayer
 ColorRect
 TextureRect

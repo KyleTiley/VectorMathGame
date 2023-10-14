@@ -37,9 +37,46 @@ script = ExtResource("3_4f0yh")
 position = Vector2(197, 321)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Levels/VectorAddition"]
-offset_left = 157.0
-offset_right = 633.0
-offset_bottom = 87.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 465.0
+offset_bottom = 72.0
 theme_override_colors/default_color = Color(0.168536, 0.0586099, 0.329259, 1)
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
+text = "Vector Addition:
+What is vector (0, 00) minus vector (0, 00) ?"
+
+[node name="LineEdit1" type="LineEdit" parent="Levels/VectorAddition"]
+offset_left = 476.5
+offset_top = 42.0
+offset_right = 510.5
+offset_bottom = 76.0
+theme_override_constants/minimum_character_width = 1
+theme_override_font_sizes/font_size = 26
+max_length = 2
+
+[node name="LineEdit2" type="LineEdit" parent="Levels/VectorAddition"]
+offset_left = 523.0
+offset_top = 42.0
+offset_right = 557.0
+offset_bottom = 76.0
+theme_override_constants/minimum_character_width = 1
+theme_override_font_sizes/font_size = 26
+max_length = 2
+
+[node name="Labelanswer" type="Label" parent="Levels/VectorAddition"]
+offset_left = 476.0
+offset_top = 17.0
+offset_right = 560.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 26
+text = "ANSWER:"
+
+[node name="Label" type="Label" parent="Levels/VectorAddition"]
+offset_left = 467.0
+offset_top = 46.0
+offset_right = 589.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 26
+text = "(        ,        )"

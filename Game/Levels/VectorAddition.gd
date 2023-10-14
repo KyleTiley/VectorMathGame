@@ -13,10 +13,11 @@ var y_min : int = 2
 var y_max : int = 4
 var y_edge : int = 7
 
-var compute_addition = false
+var compute_addition = true
 
 # move to function for start button
 func _ready():
+	question_rich_label.text = ""
 	if compute_addition:
 		compute_vectors_addition()
 	else:
@@ -33,8 +34,16 @@ func compute_vectors_addition():
 		if !check_vector_parallel(vector_1, vector_2):
 			end = true
 	graph.receive_question(vector_1, vector_2)
-#	question_label.text = "Vector Addition:" + '\n'
-#	question_label.text += "What is vector " + str(vector_1) + " plus vector " + str(vector_2) + " ?"
+	question_rich_label.add_text("Vector Addition:" + '\n')
+	question_rich_label.add_text("What is vector ")
+	question_rich_label.push_color(Global.pink)
+	question_rich_label.add_text(str(vector_1))
+	question_rich_label.push_color(Global.purple)
+	question_rich_label.add_text(" plus vector ")
+	question_rich_label.push_color(Global.orange)
+	question_rich_label.add_text(str(vector_2))
+	question_rich_label.push_color(Global.purple)
+	question_rich_label.add_text(" ?")
 
 func compute_vectors_subtraction():
 	vector_1 = vector_setting(x_max, x_edge, y_max, y_edge)
