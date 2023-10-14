@@ -12,28 +12,40 @@ var y_min : int = 2
 var y_max : int = 4
 var y_edge : int = 7
 
+var compute_addition = false
+
+# move to function for start button
 func _ready():
-	compute_vectors()
+	if compute_addition:
+		compute_vectors_addition()
+	else:
+		compute_vectors_subtraction()
 
 var x_component : int
 var y_component : int
 
-func compute_vectors():
-	vector_1 = vector_setting_addition()
-	
+func compute_vectors_addition():
+	vector_1 = vector_setting(x_min, x_max, y_min, y_max)
 	var end = false
 	while !end:
-		vector_2 = vector_setting_addition()
-		
+		vector_2 = vector_setting(x_min, x_max, y_min, y_max)
 		if !check_vector_parallel(vector_1, vector_2):
 			end = true
-	
 	graph.receive_question(vector_1, vector_2)
 
-func vector_setting_addition():
+func compute_vectors_subtraction():
+	vector_1 = vector_setting(x_max, x_edge, y_max, y_edge)
+	var end = false
+	while !end:
+		vector_2 = vector_setting(x_min, x_max, y_min, y_max)
+		if !check_vector_parallel(vector_1, vector_2):
+			end = true
+	graph.receive_question(vector_1, vector_2)
+
+func vector_setting(x1, x2, y1, y2):
 	var vector : Vector2
-	x_component = random_number_generator(x_min, x_max)
-	y_component = random_number_generator(y_min, y_max)
+	x_component = random_number_generator(x1, x2)
+	y_component = random_number_generator(y1, y2)
 	vector = Vector2(x_component, y_component)
 	return vector
 
