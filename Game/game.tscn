@@ -96,14 +96,14 @@ texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonComingSoon"]
 layout_mode = 0
-offset_left = 23.5
+offset_left = 10.0
 offset_top = 4.0
-offset_right = 148.5
+offset_right = 137.0
 offset_bottom = 33.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
 theme_override_font_sizes/font_size = 26
-text = "Soon..."
+text = "More Soon..."
 
 [node name="Title" type="Control" parent="UI/MainMenu"]
 anchors_preset = 0

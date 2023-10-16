@@ -95,11 +95,19 @@ func _on_button_reset_pressed():
 	graph.reset_vectors()
 
 func _on_answer_button_pressed():
-	var x = vector_1.x - vector_2.x
-	var y = vector_1.y - vector_2.y
+	var x : int = 0
+	var y : int = 0
+	if compute_addition:
+		x = vector_1.x + vector_2.x
+		y = vector_1.y + vector_2.y
+	else:	
+		x = vector_1.x - vector_2.x
+		y = vector_1.y - vector_2.y
 	print(x)
 	print(y)
-	if(str(x_answer.text) == str(x)) and (str(y_answer) == str(y)):
+	print(x_answer.text)
+	print(y_answer.text)
+	if int(x_answer.text) == x and int(y_answer.text) == y:
 		print("correct")
 	else:
 		print("wrong")
