@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var graph = $VectorGraph
 @onready var question_rich_label = $RichTextLabel
-
+@onready var x_answer = $Answer/LineEdit1
+@onready var y_answer = $Answer/LineEdit2
 var vector_1 : Vector2
 var vector_2 : Vector2
 
@@ -92,3 +93,13 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 func _on_button_reset_pressed():
 	setup_level()
 	graph.reset_vectors()
+
+func _on_answer_button_pressed():
+	var x = vector_1.x - vector_2.x
+	var y = vector_1.y - vector_2.y
+	print(x)
+	print(y)
+	if(str(x_answer.text) == str(x)) and (str(y_answer) == str(y)):
+		print("correct")
+	else:
+		print("wrong")

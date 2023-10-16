@@ -27,13 +27,12 @@ text = "Vector Addition:
 What is vector (0, 00) minus vector (0, 00) ?"
 
 [node name="ButtonReset" type="Button" parent="."]
-offset_left = 38.0
-offset_top = 97.0
-offset_right = 136.0
-offset_bottom = 157.0
+offset_left = 111.0
+offset_top = 248.0
+offset_right = 148.0
+offset_bottom = 282.0
 theme_override_font_sizes/font_size = 26
-text = "Reset
-Question"
+text = "R"
 
 [node name="Answer" type="Control" parent="."]
 layout_mode = 3
@@ -81,4 +80,14 @@ offset_bottom = 64.0
 theme_override_font_sizes/font_size = 26
 text = "(        ,        )"
 
+[node name="AnswerButton" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 81.0
+offset_right = 128.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 26
+text = "Check
+Answer"
+
 [connection signal="pressed" from="ButtonReset" to="." method="_on_button_reset_pressed"]
+[connection signal="pressed" from="AnswerButton" to="." method="_on_answer_button_pressed"]
