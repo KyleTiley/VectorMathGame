@@ -16,8 +16,11 @@ var y_edge : int = 7
 var compute_addition = false
 
 # move to function for start button
-func _ready():
-	question_rich_label.text = ""
+#func _ready():
+#	setup_level()
+
+func setup_level():
+	question_rich_label.clear()
 	if compute_addition:
 		compute_vectors_addition()
 	else:
@@ -87,4 +90,4 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 		return false
 
 func _on_button_reset_pressed():
-	print("reset")
+	setup_level()

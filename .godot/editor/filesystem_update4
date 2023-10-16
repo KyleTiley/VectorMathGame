@@ -5,3 +5,4 @@ res://Game/VectorLine/vector_line.tscn
 res://Game/Calculator/SpeechBubble/speech_bubble.tscn
 res://Game/Levels/VectorAddition.gd
 res://Game/UI.gd
+res://Game/Levels/vector_addition.tscn

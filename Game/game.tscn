@@ -73,6 +73,7 @@ texture_pressed = ExtResource("2_y031h")
 texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonSubtraction"]
+layout_mode = 0
 offset_left = 10.0
 offset_top = 4.5
 offset_right = 136.0
@@ -94,6 +95,7 @@ texture_pressed = ExtResource("2_y031h")
 texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonComingSoon"]
+layout_mode = 0
 offset_left = 23.5
 offset_top = 4.0
 offset_right = 148.5

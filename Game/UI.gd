@@ -27,7 +27,11 @@ func move_game_in(_delta):
 	game_level.position = game_level.position.lerp(Vector2.ZERO, _delta * lerp_speed)
 
 func _on_button_addition_pressed():
+	$"../Levels/VectorAddition".compute_addition = true
+	$"../Levels/VectorAddition".setup_level()
 	lerp_game = true
 
 func _on_button_subtraction_pressed():
-	pass # Replace with function body.
+	$"../Levels/VectorAddition".compute_addition = false
+	$"../Levels/VectorAddition".setup_level()
+	lerp_game = true
