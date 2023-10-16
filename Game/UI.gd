@@ -21,8 +21,6 @@ func _physics_process(delta):
 	if lerp_game:
 		move_game_in(delta)
 		move_menu_out(delta)
-	print(main_menu.global_position)
-	print(game_level.global_position)
 
 func move_menu_out(_delta):
 	main_menu.global_position = main_menu.global_position.lerp(bottom_pos, _delta * lerp_speed)

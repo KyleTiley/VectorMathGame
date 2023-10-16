@@ -16,6 +16,7 @@ var y_max : int = 4
 var y_edge : int = 7
 
 var compute_addition = false
+var next_question = false
 
 # move to function for start button
 #func _ready():
@@ -92,10 +93,14 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 		return false
 
 func _on_button_reset_pressed():
-	setup_level()
 	graph.reset_vectors()
 
 func _on_answer_button_pressed():
+	if next_question:
+		_on_button_new_pressed()
+		calculator.speech_bubble.hide()
+		next_question = false
+		return
 	var x : int = 0
 	var y : int = 0
 	if compute_addition:
@@ -107,9 +112,16 @@ func _on_answer_button_pressed():
 	if int(x_answer.text) == x and int(y_answer.text) == y:
 		calculator.change_state(calculator.CalculatorState.CELEBRATING)
 		$AnswerButton/Label.text = "Next" + '\n' + "Question"
+		next_question = true
 	else:
-		print("wrong")
-
+		calculator.speech_bubble.show()
+		calculator.change_state(calculator.CalculatorState.SPEAKING)
+		calculator.send_dialogue("TRY AGAIN")
 
 func _on_button_new_pressed():
-	pass # Replace with function body.
+	calculator.change_state(calculator.CalculatorState.IDLE)
+	setup_level()
+	x_answer.text = ""
+	y_answer.text = ""
+	$AnswerButton/Label.text = "Check" + '\n' + "Answer"
+	graph.reset_vectors()
