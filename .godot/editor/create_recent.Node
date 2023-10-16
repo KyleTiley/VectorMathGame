@@ -1,3 +1,5 @@
+Control
+Button
 Label
 LineEdit
 TextEdit
@@ -13,7 +15,5 @@ AnimationPlayer
 CanvasLayer
 ColorRect
 TextureRect
-Control
-Button
 ColorPicker
 GraphEdit

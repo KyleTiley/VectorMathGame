@@ -13,7 +13,7 @@ var y_min : int = 2
 var y_max : int = 4
 var y_edge : int = 7
 
-var compute_addition = true
+var compute_addition = false
 
 # move to function for start button
 func _ready():

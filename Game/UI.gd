@@ -1,0 +1,26 @@
+extends Control
+
+@onready var main_menu = $MainMenu
+@onready var game_level = $"../Levels/VectorAddition"
+
+var lerp_menu = false
+var lerp_game = false
+
+var lerp_speed = 5
+var top_pos = Vector2(0, 360)
+
+func _ready():
+	main_menu.position = Vector2.ZERO
+	game_level.position.x = 640
+
+func _physics_process(delta):
+	if lerp_menu:
+		move_menu_out(delta)
+	if lerp_game:
+		move_game_in(delta)
+
+func move_menu_out(_delta):
+	main_menu.position = main_menu.position.lerp(top_pos, _delta * lerp_speed)
+
+func move_game_in(_delta):
+	pass
