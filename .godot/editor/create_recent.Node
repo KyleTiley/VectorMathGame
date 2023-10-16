@@ -1,6 +1,7 @@
+TextureButton
 Control
-Button
 Label
+Button
 LineEdit
 TextEdit
 RichTextLabel

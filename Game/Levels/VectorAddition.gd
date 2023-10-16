@@ -85,3 +85,6 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 		return true
 	else:
 		return false
+
+func _on_button_reset_pressed():
+	print("reset")

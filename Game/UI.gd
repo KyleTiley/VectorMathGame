@@ -18,9 +18,16 @@ func _physics_process(delta):
 		move_menu_out(delta)
 	if lerp_game:
 		move_game_in(delta)
+		move_menu_out(delta)
 
 func move_menu_out(_delta):
 	main_menu.position = main_menu.position.lerp(top_pos, _delta * lerp_speed)
 
 func move_game_in(_delta):
-	pass
+	game_level.position = game_level.position.lerp(Vector2.ZERO, _delta * lerp_speed)
+
+func _on_button_addition_pressed():
+	lerp_game = true
+
+func _on_button_subtraction_pressed():
+	pass # Replace with function body.
