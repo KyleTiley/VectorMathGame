@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bt0o6dl5yrvhn"]
+[gd_scene load_steps=19 format=3 uid="uid://bt0o6dl5yrvhn"]
 
 [ext_resource type="Script" path="res://Game/UI.gd" id="1_1tuvy"]
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://pdxdgglm238a" path="res://Assets/bigbox2.png" id="11_dldfj"]
 [ext_resource type="Texture2D" uid="uid://djgh4d3x7hehs" path="res://Assets/smallbox3.png" id="12_05f65"]
 [ext_resource type="Texture2D" uid="uid://brcbvqmjrrr22" path="res://Assets/bigbox3.png" id="12_ig687"]
+[ext_resource type="Texture2D" uid="uid://b5yccwj6g6pte" path="res://Assets/icon1.png" id="13_e2c5g"]
+[ext_resource type="Texture2D" uid="uid://c2nce1ina4ldl" path="res://Assets/icon2.png" id="14_eyiil"]
+[ext_resource type="Texture2D" uid="uid://drsq78bv3ekh3" path="res://Assets/icon3.png" id="15_8r608"]
 
 [node name="Game" type="Node"]
 
@@ -181,14 +184,49 @@ text = "Vector Addition:
 What is vector (0, 00) minus vector (0, 00) ?"
 
 [node name="ButtonReset" type="TextureButton" parent="VectorAddition"]
-offset_left = 111.0
-offset_top = 248.0
-offset_right = 129.0
-offset_bottom = 266.0
+offset_left = 112.0
+offset_top = 234.0
+offset_right = 130.0
+offset_bottom = 252.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("10_fm04a")
 texture_pressed = ExtResource("11_amau6")
 texture_hover = ExtResource("12_05f65")
+
+[node name="Icon1" type="Sprite2D" parent="VectorAddition/ButtonReset"]
+position = Vector2(9, 9)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_e2c5g")
+
+[node name="ButtonNew" type="TextureButton" parent="VectorAddition"]
+offset_left = 112.0
+offset_top = 276.0
+offset_right = 130.0
+offset_bottom = 294.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_fm04a")
+texture_pressed = ExtResource("11_amau6")
+texture_hover = ExtResource("12_05f65")
+
+[node name="Icon2" type="Sprite2D" parent="VectorAddition/ButtonNew"]
+position = Vector2(9, 9)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_eyiil")
+
+[node name="ButtonHome" type="TextureButton" parent="VectorAddition"]
+offset_left = 112.0
+offset_top = 318.0
+offset_right = 130.0
+offset_bottom = 336.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_fm04a")
+texture_pressed = ExtResource("11_amau6")
+texture_hover = ExtResource("12_05f65")
+
+[node name="Icon3" type="Sprite2D" parent="VectorAddition/ButtonHome"]
+position = Vector2(9, 9)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_8r608")
 
 [node name="Answer" type="Control" parent="VectorAddition"]
 layout_mode = 3
