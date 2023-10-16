@@ -1,3 +1,4 @@
+AnimationPlayer
 TextureButton
 Label
 Button
@@ -12,7 +13,6 @@ Area2D
 CollisionPolygon2D
 Line2D
 Node
-AnimationPlayer
 CanvasLayer
 ColorRect
 TextureRect

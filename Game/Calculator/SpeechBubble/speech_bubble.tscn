@@ -35,4 +35,4 @@ offset_right = 66.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0.168627, 0.0588235, 0.329412, 1)
 theme_override_font_sizes/font_size = 26
-text = "HELLO"
+text = "WELCOME!"

@@ -2,6 +2,7 @@ extends Control
 
 @onready var main_menu = $MainMenu
 @onready var game_level = $"../VectorAddition"
+@onready var calculator = $"../Calculator"
 
 var lerp_menu = false
 var lerp_game = false
@@ -35,11 +36,13 @@ func move_menu_in(_delta):
 	main_menu.global_position = main_menu.global_position.lerp(Vector2.ZERO, _delta * lerp_speed)
 
 func _on_button_addition_pressed():
+	calculator.send_dialogue("GOOD LUCK!")
 	game_level.compute_addition = true
 	game_level.setup_level()
 	lerp_game = true
 
 func _on_button_subtraction_pressed():
+	calculator.send_dialogue("GOOD LUCK!")
 	game_level.compute_addition = false
 	game_level.setup_level()
 	lerp_game = true
