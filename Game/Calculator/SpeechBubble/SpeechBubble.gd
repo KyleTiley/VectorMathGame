@@ -23,3 +23,5 @@ func ChangeSpeechBubbleSize():
 		var ratio = new_size_diff / ratio_difference
 		var new_scale = middle_bubble_scale_default + ratio
 		middle_button.scale.x = new_scale
+	else:
+		middle_button.scale.x = 2

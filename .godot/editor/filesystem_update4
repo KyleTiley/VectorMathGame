@@ -8,3 +8,5 @@ res://Game/UI.gd
 res://Game/Levels/vector_addition.tscn
 res://Game/VectorLine/vector_line.gd
 res://Game/Graph/vector_graph.gd
+res://Game/Calculator/calculator.gd
+res://Game/Calculator/SpeechBubble/SpeechBubble.gd

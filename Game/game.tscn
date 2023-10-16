@@ -1,12 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://bt0o6dl5yrvhn"]
+[gd_scene load_steps=16 format=3 uid="uid://bt0o6dl5yrvhn"]
 
 [ext_resource type="Script" path="res://Game/UI.gd" id="1_1tuvy"]
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
 [ext_resource type="Texture2D" uid="uid://djdjd152icj26" path="res://Assets/button1.png" id="2_at5sf"]
 [ext_resource type="Texture2D" uid="uid://bmd4aiwlkyld4" path="res://Assets/header.png" id="2_jg7fo"]
 [ext_resource type="Texture2D" uid="uid://bmkfojsk6pl" path="res://Assets/button2.png" id="2_y031h"]
+[ext_resource type="Script" path="res://Game/Levels/VectorAddition.gd" id="3_4f0yh"]
 [ext_resource type="Texture2D" uid="uid://dxmgkn4cfg0n8" path="res://Assets/button3.png" id="3_l55qn"]
-[ext_resource type="PackedScene" uid="uid://dv4a7rdfuvwun" path="res://Game/Levels/vector_addition.tscn" id="3_qdm1t"]
+[ext_resource type="PackedScene" uid="uid://tq1ld42isp6r" path="res://Game/Graph/vector_graph.tscn" id="4_caddo"]
+[ext_resource type="Texture2D" uid="uid://bghtyqlb4mbyd" path="res://Assets/questionbox.png" id="9_q8h2b"]
+[ext_resource type="Texture2D" uid="uid://dp3ow2mbdpc1s" path="res://Assets/bigbox1.png" id="10_fk80w"]
+[ext_resource type="Texture2D" uid="uid://bmh2gs6jcwl43" path="res://Assets/smallbox1.png" id="10_fm04a"]
+[ext_resource type="Texture2D" uid="uid://b1l4i8a56dupe" path="res://Assets/smallbox2.png" id="11_amau6"]
+[ext_resource type="Texture2D" uid="uid://pdxdgglm238a" path="res://Assets/bigbox2.png" id="11_dldfj"]
+[ext_resource type="Texture2D" uid="uid://djgh4d3x7hehs" path="res://Assets/smallbox3.png" id="12_05f65"]
+[ext_resource type="Texture2D" uid="uid://brcbvqmjrrr22" path="res://Assets/bigbox3.png" id="12_ig687"]
 
 [node name="Game" type="Node"]
 
@@ -147,10 +155,114 @@ theme_override_font_sizes/font_size = 52
 text = "Vectors"
 
 [node name="Calculator" parent="." instance=ExtResource("1_lx25n")]
-position = Vector2(59, 268)
+position = Vector2(42, 268)
 
-[node name="VectorAddition" parent="." instance=ExtResource("3_qdm1t")]
+[node name="VectorAddition" type="Node2D" parent="."]
 position = Vector2(640, 0)
+script = ExtResource("3_4f0yh")
+
+[node name="VectorGraph" parent="VectorAddition" instance=ExtResource("4_caddo")]
+position = Vector2(197, 321)
+
+[node name="Questionbox" type="Sprite2D" parent="VectorAddition"]
+position = Vector2(394, 44)
+scale = Vector2(2, 2)
+texture = ExtResource("9_q8h2b")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VectorAddition"]
+offset_left = 169.0
+offset_top = 19.0
+offset_right = 624.0
+offset_bottom = 71.0
+theme_override_colors/default_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Vector Addition:
+What is vector (0, 00) minus vector (0, 00) ?"
+
+[node name="ButtonReset" type="TextureButton" parent="VectorAddition"]
+offset_left = 111.0
+offset_top = 248.0
+offset_right = 129.0
+offset_bottom = 266.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_fm04a")
+texture_pressed = ExtResource("11_amau6")
+texture_hover = ExtResource("12_05f65")
+
+[node name="Answer" type="Control" parent="VectorAddition"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 131.0
+offset_bottom = 79.0
+
+[node name="LineEdit1" type="LineEdit" parent="VectorAddition/Answer"]
+layout_mode = 0
+offset_left = 12.5
+offset_top = 31.0
+offset_right = 46.5
+offset_bottom = 65.0
+theme_override_constants/minimum_character_width = 1
+theme_override_font_sizes/font_size = 26
+max_length = 2
+
+[node name="LineEdit2" type="LineEdit" parent="VectorAddition/Answer"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 31.0
+offset_right = 93.0
+offset_bottom = 65.0
+theme_override_constants/minimum_character_width = 1
+theme_override_font_sizes/font_size = 26
+max_length = 2
+
+[node name="Labelanswer" type="Label" parent="VectorAddition/Answer"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 96.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 26
+text = "ANSWER:"
+
+[node name="Label" type="Label" parent="VectorAddition/Answer"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 35.0
+offset_right = 125.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 26
+text = "(        ,        )"
+
+[node name="AnswerButton" type="TextureButton" parent="VectorAddition"]
+offset_left = 28.0
+offset_top = 84.0
+offset_right = 78.0
+offset_bottom = 118.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_fk80w")
+texture_pressed = ExtResource("11_dldfj")
+texture_hover = ExtResource("12_ig687")
+
+[node name="Label" type="Label" parent="VectorAddition/AnswerButton"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 99.0
+offset_bottom = 63.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/font_size = 26
+text = "Check
+Answer"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="UI/MainMenu/ButtonAddition" to="UI" method="_on_button_addition_pressed"]
 [connection signal="pressed" from="UI/MainMenu/ButtonSubtraction" to="UI" method="_on_button_subtraction_pressed"]
+[connection signal="mouse_entered" from="VectorAddition/ButtonReset" to="Calculator" method="_on_button_reset_mouse_entered"]
+[connection signal="mouse_exited" from="VectorAddition/ButtonReset" to="Calculator" method="_on_button_reset_mouse_exited"]
+[connection signal="pressed" from="VectorAddition/ButtonReset" to="VectorAddition" method="_on_button_reset_pressed"]
+[connection signal="pressed" from="VectorAddition/AnswerButton" to="VectorAddition" method="_on_answer_button_pressed"]

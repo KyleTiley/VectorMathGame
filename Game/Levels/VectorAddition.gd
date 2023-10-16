@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var calculator = $"../Calculator"
 @onready var graph = $VectorGraph
 @onready var question_rich_label = $RichTextLabel
 @onready var x_answer = $Answer/LineEdit1
@@ -103,11 +104,8 @@ func _on_answer_button_pressed():
 	else:	
 		x = vector_1.x - vector_2.x
 		y = vector_1.y - vector_2.y
-	print(x)
-	print(y)
-	print(x_answer.text)
-	print(y_answer.text)
 	if int(x_answer.text) == x and int(y_answer.text) == y:
-		print("correct")
+		calculator.change_state(calculator.CalculatorState.CELEBRATING)
+		$AnswerButton/Label.text = "Next" + '\n' + "Question"
 	else:
 		print("wrong")
