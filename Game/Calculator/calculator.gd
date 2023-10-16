@@ -40,3 +40,17 @@ func _on_button_reset_mouse_entered():
 
 func _on_button_reset_mouse_exited():
 	speech_bubble.hide()
+
+func _on_button_new_mouse_entered():
+	custom_speech("NEW SUM?")
+	speech_bubble.show()
+
+func _on_button_new_mouse_exited():
+	speech_bubble.hide()
+
+func _on_button_home_mouse_entered():
+	custom_speech("MAIN MENU?")
+	speech_bubble.show()
+
+func _on_button_home_mouse_exited():
+	speech_bubble.hide()

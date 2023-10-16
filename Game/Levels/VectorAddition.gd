@@ -109,3 +109,7 @@ func _on_answer_button_pressed():
 		$AnswerButton/Label.text = "Next" + '\n' + "Question"
 	else:
 		print("wrong")
+
+
+func _on_button_new_pressed():
+	pass # Replace with function body.
