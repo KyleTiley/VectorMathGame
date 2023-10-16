@@ -91,3 +91,4 @@ func check_vector_parallel(vec1 : Vector2, vec2 : Vector2):
 
 func _on_button_reset_pressed():
 	setup_level()
+	graph.reset_vectors()

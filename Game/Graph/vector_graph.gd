@@ -20,3 +20,7 @@ func create_question_line(line : Line2D, vector: Vector2):
 	var line_end = Vector2(x, y)
 	line.add_point(line_end)
 	line.create_arrow()
+
+func reset_vectors():
+	vector1_line.reset_vector_position()
+	vector2_line.reset_vector_position()

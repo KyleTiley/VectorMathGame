@@ -4,20 +4,22 @@ extends Line2D
 @onready var position_node = $PositionNode
 @onready var collision = CollisionShape2D.new()
 
+var neutral_pos = Vector2(197, 321)
+
 var diff
 func create_arrow():
 	var start_point = self.get_point_position(0)
 	var end_point = self.get_point_position(1)
 	
 	diff = end_point - start_point
-	print(diff)
 	
 	# set up collision
 	collision.shape = RectangleShape2D.new()
 	collision.position = diff/2
+	for child in area.get_children():
+		area.remove_child(child)
 	area.add_child(collision)
-	collision.rotation = atan(diff.y / diff.x) # angle a bit off?
-	print(collision.rotation)
+	collision.rotation = atan(diff.y / diff.x) # angle a bit off?\
 	collision.shape.extents.y = 5
 	collision.shape.extents.x = sqrt(pow(diff.x, 2) + pow(diff.y, 2))/2 # div of 2 since rez is double
 	
@@ -54,3 +56,7 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseButton and not event.pressed and event.button_index == 1:
 		selected = false
+
+func reset_vector_position():
+	print(global_position)
+	global_position = neutral_pos
