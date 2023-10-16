@@ -58,5 +58,4 @@ func _input(event):
 		selected = false
 
 func reset_vector_position():
-	print(global_position)
 	global_position = neutral_pos
