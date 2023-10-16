@@ -7,6 +7,7 @@ enum CalculatorState{
 	IDLE,
 	SPEAKING,
 	CELEBRATING,
+	WRONG
 }
 
 func _input(event):
@@ -19,13 +20,15 @@ func change_state(state : CalculatorState):
 	match state:
 		CalculatorState.IDLE:
 			animation_player.play("idle")
-			send_dialogue("HELLO")
 		CalculatorState.SPEAKING:
 			pass
 		CalculatorState.CELEBRATING:
 			animation_player.play("celebrate")
 			send_dialogue("WELL DONE!")
 			speech_bubble.show()
+		CalculatorState.WRONG:
+			animation_player.play("wrong_answer")
+			
 
 func send_dialogue(dialogue_text : String):
 	speech_bubble.change_text(dialogue_text)
@@ -53,4 +56,8 @@ func _on_button_home_mouse_entered():
 	speech_bubble.show()
 
 func _on_button_home_mouse_exited():
+	speech_bubble.hide()
+
+func _on_animation_player_animation_finished(wrong_answer):
+	change_state(CalculatorState.IDLE)
 	speech_bubble.hide()

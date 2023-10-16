@@ -115,7 +115,7 @@ func _on_answer_button_pressed():
 		next_question = true
 	else:
 		calculator.speech_bubble.show()
-		calculator.change_state(calculator.CalculatorState.SPEAKING)
+		calculator.change_state(calculator.CalculatorState.WRONG)
 		calculator.send_dialogue("TRY AGAIN")
 
 func _on_button_new_pressed():
