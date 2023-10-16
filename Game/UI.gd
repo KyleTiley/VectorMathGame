@@ -1,7 +1,7 @@
 extends Control
 
 @onready var main_menu = $MainMenu
-@onready var game_level = $"../Levels/VectorAddition"
+@onready var game_level = $"../VectorAddition"
 
 var lerp_menu = false
 var lerp_game = false
@@ -27,11 +27,11 @@ func move_game_in(_delta):
 	game_level.position = game_level.position.lerp(Vector2.ZERO, _delta * lerp_speed)
 
 func _on_button_addition_pressed():
-	$"../Levels/VectorAddition".compute_addition = true
-	$"../Levels/VectorAddition".setup_level()
+	game_level.compute_addition = true
+	game_level.setup_level()
 	lerp_game = true
 
 func _on_button_subtraction_pressed():
-	$"../Levels/VectorAddition".compute_addition = false
-	$"../Levels/VectorAddition".setup_level()
+	game_level.compute_addition = false
+	game_level.setup_level()
 	lerp_game = true

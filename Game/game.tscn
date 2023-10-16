@@ -147,11 +147,9 @@ theme_override_font_sizes/font_size = 52
 text = "Vectors"
 
 [node name="Calculator" parent="." instance=ExtResource("1_lx25n")]
-position = Vector2(53, 262)
+position = Vector2(59, 268)
 
-[node name="Levels" type="Node" parent="."]
-
-[node name="VectorAddition" parent="Levels" instance=ExtResource("3_qdm1t")]
+[node name="VectorAddition" parent="." instance=ExtResource("3_qdm1t")]
 position = Vector2(640, 0)
 
 [connection signal="pressed" from="UI/MainMenu/ButtonAddition" to="UI" method="_on_button_addition_pressed"]
