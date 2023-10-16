@@ -21,6 +21,8 @@ func _physics_process(delta):
 	if lerp_game:
 		move_game_in(delta)
 		move_menu_out(delta)
+	print(main_menu.global_position)
+	print(game_level.global_position)
 
 func move_menu_out(_delta):
 	main_menu.global_position = main_menu.global_position.lerp(bottom_pos, _delta * lerp_speed)
@@ -29,7 +31,7 @@ func move_game_in(_delta):
 	game_level.global_position = game_level.global_position.lerp(Vector2.ZERO, _delta * lerp_speed)
 
 func move_game_out(_delta):
-	game_level.global_position = game_level.position.lerp(right_pos, _delta * lerp_speed)
+	game_level.global_position = game_level.global_position.lerp(right_pos, _delta * lerp_speed)
 	
 func move_menu_in(_delta):
 	main_menu.global_position = main_menu.global_position.lerp(Vector2.ZERO, _delta * lerp_speed)
@@ -45,5 +47,6 @@ func _on_button_subtraction_pressed():
 	lerp_game = true
 
 func _on_button_home_pressed():
-	lerp_menu = true
-	lerp_game = false
+	get_tree().reload_current_scene() #other method did not work ask on reddit sometime
+#	lerp_menu = true
+#	lerp_game = false
