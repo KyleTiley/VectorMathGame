@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Game/UI.gd" id="1_1tuvy"]
 [ext_resource type="PackedScene" uid="uid://cbgvg7rm1fyk1" path="res://Game/Calculator/calculator.tscn" id="1_lx25n"]
 [ext_resource type="Texture2D" uid="uid://djdjd152icj26" path="res://Assets/button1.png" id="2_at5sf"]
+[ext_resource type="Texture2D" uid="uid://bmd4aiwlkyld4" path="res://Assets/header.png" id="2_jg7fo"]
 [ext_resource type="Texture2D" uid="uid://bmkfojsk6pl" path="res://Assets/button2.png" id="2_y031h"]
 [ext_resource type="Texture2D" uid="uid://dxmgkn4cfg0n8" path="res://Assets/button3.png" id="3_l55qn"]
 [ext_resource type="PackedScene" uid="uid://dv4a7rdfuvwun" path="res://Game/Levels/vector_addition.tscn" id="3_qdm1t"]
-[ext_resource type="Texture2D" uid="uid://cvarbbvc0wbi7" path="res://Assets/funkyfuture-8-32x.png" id="4_d2gfx"]
 
 [node name="Game" type="Node"]
 
@@ -41,20 +41,20 @@ mouse_filter = 2
 
 [node name="ButtonAddition" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
-offset_left = 271.0
-offset_top = 164.0
-offset_right = 321.0
-offset_bottom = 182.0
+offset_left = 237.0
+offset_top = 200.0
+offset_right = 319.0
+offset_bottom = 218.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_at5sf")
 texture_pressed = ExtResource("2_y031h")
 texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonAddition"]
-layout_mode = 0
-offset_left = 4.0
+layout_mode = 1
+offset_left = 19.5
 offset_top = 4.5
-offset_right = 88.0
+offset_right = 103.5
 offset_bottom = 33.5
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
@@ -63,20 +63,20 @@ text = "Addition"
 
 [node name="ButtonSubtraction" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 211.0
-offset_right = 322.0
-offset_bottom = 229.0
+offset_left = 237.0
+offset_top = 250.0
+offset_right = 319.0
+offset_bottom = 268.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_at5sf")
 texture_pressed = ExtResource("2_y031h")
 texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonSubtraction"]
-offset_left = 3.0
-offset_top = 4.0
-offset_right = 129.0
-offset_bottom = 33.0
+offset_left = 10.0
+offset_top = 4.5
+offset_right = 136.0
+offset_bottom = 33.5
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
 theme_override_font_sizes/font_size = 26
@@ -84,56 +84,62 @@ text = "Subtraction"
 
 [node name="ButtonComingSoon" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
-offset_left = 273.0
-offset_top = 271.0
-offset_right = 323.0
-offset_bottom = 289.0
+offset_left = 237.0
+offset_top = 300.0
+offset_right = 319.0
+offset_bottom = 318.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("2_at5sf")
 texture_pressed = ExtResource("2_y031h")
 texture_hover = ExtResource("3_l55qn")
 
 [node name="Label" type="Label" parent="UI/MainMenu/ButtonComingSoon"]
-offset_left = 4.0
-offset_top = 4.5
-offset_right = 88.0
-offset_bottom = 33.5
+offset_left = 23.5
+offset_top = 4.0
+offset_right = 148.5
+offset_bottom = 33.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
 theme_override_font_sizes/font_size = 26
-text = "Coming Soon"
+text = "Soon..."
 
 [node name="Title" type="Control" parent="UI/MainMenu"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 15.0
+offset_right = 640.0
+offset_bottom = 175.0
+
+[node name="Header" type="Sprite2D" parent="UI/MainMenu/Title"]
+position = Vector2(320, 85)
+scale = Vector2(3, 3)
+texture = ExtResource("2_jg7fo")
 
 [node name="Label" type="Label" parent="UI/MainMenu/Title"]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 8.0
-offset_right = 307.0
-offset_bottom = 63.0
+offset_left = 148.0
+offset_top = 25.0
+offset_right = 304.0
+offset_bottom = 80.0
 theme_override_colors/font_color = Color(0.670726, 0.121141, 0.396185, 1)
 theme_override_font_sizes/font_size = 52
 text = "Visually"
 
 [node name="Label2" type="Label" parent="UI/MainMenu/Title"]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 51.0
-offset_right = 380.0
-offset_bottom = 106.0
+offset_left = 261.0
+offset_top = 68.0
+offset_right = 377.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(1, 0.506096, 0.258915, 1)
 theme_override_font_sizes/font_size = 52
 text = "Learn"
 
 [node name="Label3" type="Label" parent="UI/MainMenu/Title"]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 92.0
-offset_right = 500.0
-offset_bottom = 147.0
+offset_left = 329.0
+offset_top = 109.0
+offset_right = 497.0
+offset_bottom = 164.0
 theme_override_colors/font_color = Color(1, 0.309712, 0.41181, 1)
 theme_override_font_sizes/font_size = 52
 text = "Vectors"
@@ -145,10 +151,6 @@ position = Vector2(53, 262)
 
 [node name="VectorAddition" parent="Levels" instance=ExtResource("3_qdm1t")]
 position = Vector2(640, 0)
-
-[node name="Funkyfuture-8-32x" type="Sprite2D" parent="."]
-position = Vector2(292, -59)
-texture = ExtResource("4_d2gfx")
 
 [connection signal="pressed" from="UI/MainMenu/ButtonAddition" to="UI" method="_on_button_addition_pressed"]
 [connection signal="pressed" from="UI/MainMenu/ButtonSubtraction" to="UI" method="_on_button_subtraction_pressed"]

@@ -7,7 +7,7 @@ var lerp_menu = false
 var lerp_game = false
 
 var lerp_speed = 5
-var top_pos = Vector2(0, 360)
+var bottom_pos = Vector2(0, 360)
 
 func _ready():
 	main_menu.position = Vector2.ZERO
@@ -21,7 +21,7 @@ func _physics_process(delta):
 		move_menu_out(delta)
 
 func move_menu_out(_delta):
-	main_menu.position = main_menu.position.lerp(top_pos, _delta * lerp_speed)
+	main_menu.position = main_menu.position.lerp(bottom_pos, _delta * lerp_speed)
 
 func move_game_in(_delta):
 	game_level.position = game_level.position.lerp(Vector2.ZERO, _delta * lerp_speed)
