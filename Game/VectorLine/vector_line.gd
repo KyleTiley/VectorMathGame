@@ -19,9 +19,9 @@ func create_arrow():
 	for child in area.get_children():
 		area.remove_child(child)
 	area.add_child(collision)
-	collision.rotation = atan(diff.y / diff.x) # angle a bit off?\
+	collision.rotation = atan(diff.y / diff.x) # use atan not tanh for better angle
 	collision.shape.extents.y = 5
-	collision.shape.extents.x = sqrt(pow(diff.x, 2) + pow(diff.y, 2))/2 # div of 2 since rez is double
+	collision.shape.extents.x = sqrt(pow(diff.x, 2) + pow(diff.y, 2))/2 # div of 2 since double rez
 	
 	var theta = atan2(diff.y, diff.x)
 	var rad = deg_to_rad(35)

@@ -1,8 +1,8 @@
 res://Assets/Fonts/CalculatorFont.tres::fe9eac820bb1f2408766e7128f67efe1::1696943896::res://.godot/exported/133200997/export-ebc1b62732f78a16470ab8718b0df113-CalculatorFont.res
-res://Game/Calculator/SpeechBubble/speech_bubble.tscn::0fe5632df97cc09deb69f18f8fd2c443::1697453843::res://.godot/exported/133200997/export-6dda984e1b6fb5ea54de1e3a21ba980d-speech_bubble.scn
-res://Game/Calculator/calculator.tscn::aaabe3dd942baacf27dcdea4e2f2141b::1697466195::res://.godot/exported/133200997/export-fb7ab2fc6dbbeb72ebeacb81cdd4ec10-calculator.scn
+res://Game/Calculator/SpeechBubble/speech_bubble.tscn::0fe5632df97cc09deb69f18f8fd2c443::1697478971::res://.godot/exported/133200997/export-6dda984e1b6fb5ea54de1e3a21ba980d-speech_bubble.scn
+res://Game/Calculator/calculator.tscn::66cc1836df70d384ded383ae24726c42::1697478971::res://.godot/exported/133200997/export-fb7ab2fc6dbbeb72ebeacb81cdd4ec10-calculator.scn
 res://Game/Graph/graph_point_area_2d.tscn::b6f3448f70fa24901bb61ebfb32fe037::1697185835::res://.godot/exported/133200997/export-550b6dc725ada26e44b1591933923801-graph_point_area_2d.scn
-res://Game/Graph/vector_graph.tscn::376271c943c683f9db7c11b864314115::1697466194::res://.godot/exported/133200997/export-a54e9afd67b25aff7d637743bb777d49-vector_graph.scn
-res://Game/Levels/vector_addition.tscn::5bb20091c6d7f9382d35c5077ce8acba::1697466194::res://.godot/exported/133200997/export-db4c2c498b9808aada39591754a27100-vector_addition.scn
+res://Game/Graph/vector_graph.tscn::376271c943c683f9db7c11b864314115::1697478971::res://.godot/exported/133200997/export-a54e9afd67b25aff7d637743bb777d49-vector_graph.scn
+res://Game/Levels/vector_addition.tscn::807c130c26ddb2a8eadd7156d07c19fa::1697478971::res://.godot/exported/133200997/export-db4c2c498b9808aada39591754a27100-vector_addition.scn
 res://Game/VectorLine/vector_line.tscn::9a8d7d23a46cfccfd134807cc5dfc0d2::1697453843::res://.godot/exported/133200997/export-144faacbe208c049fd08e9183261021f-vector_line.scn
-res://Game/game.tscn::5fa669b883710836382008bbdfdee1c4::1697466194::res://.godot/exported/133200997/export-8f3dd55d8784d9346a9c65607a93bf7b-game.scn
+res://Game/game.tscn::97338a52c626b882a3be08e744186f0c::1697478971::res://.godot/exported/133200997/export-8f3dd55d8784d9346a9c65607a93bf7b-game.scn

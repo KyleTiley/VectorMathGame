@@ -10,6 +10,9 @@ var label_size_default = 54
 var ratio_difference = 16
 var speech_text : String
 
+func _ready():
+	label.text = "WELCOME!"
+
 func _process(_delta):
 	ChangeSpeechBubbleSize()
 	right_bubble.global_position = middle_button_target.global_position
