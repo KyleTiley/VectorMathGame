@@ -41,28 +41,67 @@ mouse_filter = 2
 
 [node name="ButtonAddition" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
-offset_left = 269.0
-offset_top = 154.0
-offset_right = 319.0
-offset_bottom = 172.0
+offset_left = 271.0
+offset_top = 164.0
+offset_right = 321.0
+offset_bottom = 182.0
 scale = Vector2(2, 2)
-texture_normal = ExtResource("2_y031h")
-texture_pressed = ExtResource("3_l55qn")
-texture_hover = ExtResource("2_at5sf")
+texture_normal = ExtResource("2_at5sf")
+texture_pressed = ExtResource("2_y031h")
+texture_hover = ExtResource("3_l55qn")
 
-[node name="ButtonSubtraction" type="Button" parent="UI/MainMenu"]
+[node name="Label" type="Label" parent="UI/MainMenu/ButtonAddition"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 202.0
-offset_right = 399.0
-offset_bottom = 255.0
+offset_left = 4.0
+offset_top = 4.5
+offset_right = 88.0
+offset_bottom = 33.5
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/font_size = 26
+text = "Addition"
 
-[node name="ButtonComingSoon" type="Button" parent="UI/MainMenu"]
+[node name="ButtonSubtraction" type="TextureButton" parent="UI/MainMenu"]
 layout_mode = 0
-offset_left = 244.0
-offset_top = 281.0
-offset_right = 395.0
-offset_bottom = 334.0
+offset_left = 272.0
+offset_top = 211.0
+offset_right = 322.0
+offset_bottom = 229.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_at5sf")
+texture_pressed = ExtResource("2_y031h")
+texture_hover = ExtResource("3_l55qn")
+
+[node name="Label" type="Label" parent="UI/MainMenu/ButtonSubtraction"]
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 129.0
+offset_bottom = 33.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/font_size = 26
+text = "Subtraction"
+
+[node name="ButtonComingSoon" type="TextureButton" parent="UI/MainMenu"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 271.0
+offset_right = 323.0
+offset_bottom = 289.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_at5sf")
+texture_pressed = ExtResource("2_y031h")
+texture_hover = ExtResource("3_l55qn")
+
+[node name="Label" type="Label" parent="UI/MainMenu/ButtonComingSoon"]
+offset_left = 4.0
+offset_top = 4.5
+offset_right = 88.0
+offset_bottom = 33.5
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.168536, 0.0586099, 0.329259, 1)
+theme_override_font_sizes/font_size = 26
+text = "Coming Soon"
 
 [node name="Title" type="Control" parent="UI/MainMenu"]
 anchors_preset = 0
